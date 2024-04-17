@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<!-- information sourced from kickoff meeting notes -->
-		<h1>Team 7 Kickoff Meeting</h1>
+		<header><h1>Team 7 Kickoff Meeting</h1></header>
 
 		<nav>
 			<ul>
@@ -225,7 +225,131 @@
 		>
 	</body>
 
-    <h2>Review Form</h2>
-    
+	<h2>Review Form</h2>
 
+	<h4>Divs and Spans</h4>
+	<div>
+		<div>
+			<span> This is a nested Span within a div within a div</span>
+			<span
+				>The true goal of a CS Major is to
+				<b> learn how to center a div within a div</b></span
+			>
+		</div>
+	</div>
+
+	<form>
+		<fieldset>
+			<legend>Meeting Information</legend>
+			<label for="date">Date:</label>
+			<input
+				type="text"
+				id="date"
+				name="date"
+				value="April 13, 2024"
+			/><br /><br />
+
+			<label for="time">Time:</label>
+			<input
+				type="text"
+				id="time"
+				name="time"
+				value="6:00 PM - 8:00 PM"
+			/><br /><br />
+
+			<label for="location">Location:</label>
+			<input
+				type="text"
+				id="location"
+				name="location"
+				value="Price Center and Zoom"
+			/><br /><br />
+		</fieldset>
+
+		<fieldset>
+			<legend>Note Taker</legend>
+			<input type="checkbox" id="arnav" name="attendee" value="Arnav" />
+			<label for="arnav">Arnav</label><br />
+
+			<legend>Meeting Leader</legend>
+			<input
+				type="checkbox"
+				id="samvrit"
+				name="attendee"
+				value="Samvrit"
+			/>
+			<label for="samvrit">Samvrit</label><br />
+		</fieldset>
+		<fieldset>
+			<legend>Meeting Agenda</legend>
+			<label for="agenda-review">Agenda Feedback</label><br />
+			<textarea
+				id="agenda-review"
+				name="agenda-review"
+				rows="4"
+				cols="50"
+			></textarea
+			><br /><br />
+
+			<label for="discussion-review">What you got from Discussion</label
+			><br />
+			<textarea
+				id="discussion-review"
+				name="discussion-review"
+				rows="4"
+				cols="50"
+			></textarea
+			><br /><br />
+
+			<label for="action-items">Your Action Items:</label><br />
+			<textarea
+				id="action-items"
+				name="action-items"
+				rows="4"
+				cols="50"
+			></textarea
+			><br /><br />
+		</fieldset>
+
+		<fieldset>
+			<legend>Comments</legend>
+			<label for="comments">Comments:</label><br />
+			<textarea
+				id="comments"
+				name="comments"
+				rows="4"
+				cols="50"
+			></textarea
+			><br /><br />
+		</fieldset>
+		<fieldset>
+			How would you rate this meeting?
+			<select id="Final Rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</fieldset>
+		<filedset>
+			How are you feeling?
+			<datalist id="Feeling">
+				<option value="Happy">Happy</option>
+				<option value="Sad">Sad</option>
+				<option value="Sleepy">Sleepy</option>
+				<option value="Shapes">Shapes</option>
+			</datalist>
+			<input list="Feeling" name="Feeling" />
+		</filedset>
+		<br />
+		<button type="submit">Submit</button>
+	</form>
+	<footer>
+		<p>
+			Thank you for visiting my HTML site, hope you return soon!(<em
+				>For CSS</em
+			>)
+		</p>
+	</footer>
 </html>
