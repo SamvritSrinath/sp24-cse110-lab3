@@ -5,16 +5,93 @@ rgb(r,g,b) Check  rgba(r,g,b,a) Check
 hex #FFF Check ### FFFFFF Check
 hsl hsla Check
 color(colorspace c1 c2 c3 [\A]) Check
-color-mix(colorspace c1[p1] c2[p2] [\A])
-CSS Variables + Fallbacks
 
-Background color
+color-mix(colorspace c1[p1] c2[p2] [\A]) Check
+CSS Variables + Fallbacks Check
+Used --main-bg-color as HTML Variable for solution, then referenced in root and footer with fallback
+
+
+
+Background color Check
+
+
 
 Units
 3 Absolute: 
     px, cm, in
 3 Relative:
     em, rem, vw
+
+
+Box Model:
+
+Margin
+    Need to use longmargin(margin-top, margin-right, margin-bottom, margin-left)
+    Short margin(margin: 10px 20px 30px 40px)
+    Auto margins(margin: auto)
+
+Padding
+    Long padding(padding-top, padding-right, padding-bottom, padding-left)
+    Short padding(padding: 10px 20px 30px 40px)
+
+Borders
+    border-style
+    border-width
+    border-color
+    border-radius
+
+Text
+    color
+    text-align
+    text-decoration
+
+Display
+    Must use at least 2: none, block, inline, inline-block
+Sizing:
+    height,
+    width,
+    max-width,
+    min-width
+Position: 
+Use two of the values on position
+    absolute,relative,fixed,static,sticky
+
+Pseudoclass:
+:hover
+:active 
+
+Layouts
+    Flex
+        3 Flexbox attributes
+        At least 5 children within the flex
+    Grid
+        Apply Grid to display
+        two children in the grid, use at least 5 grid attributes
+
+Media Query
+    Use 1 Media Query for screen-width(for responsive design)
+
+External Fonts: 
+    Use at least 1 external font
+
+
+Selectors
+.class
+#id
+* (universal)
+element
+attribute=foo
+element, element
+p:hover
+Descendent Combinator(element element)
+Child Combinator(element > element)
+General sibling combinator(element ~ element)
+Adjacent sibling combinator(element + element)
+Combining Two Selectors(element.class)
+:has() Selector
+Nested Selectors
+*/
+
 
 /* ID Selector (#id) ID = Date */
 #date {
@@ -97,6 +174,8 @@ section + section {
 section#agenda {
 	background-color: #87ceeb; /* sky blue */
 }
+
+
 
 
 /* :has() Selector */
