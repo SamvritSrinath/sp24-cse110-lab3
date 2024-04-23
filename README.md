@@ -1,4 +1,4 @@
-# Lab 2 - Starter
+# Lab 3
 
 Here is my Github Link: [https://samvritsrinath.github.io/Lab2_Starter/](https://samvritsrinath.github.io/Lab2_Starter/)
 
