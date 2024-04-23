@@ -18,32 +18,32 @@ Background color Check
 
 Units
 3 Absolute: 
-    px, cm, in Check(px in #date, cm in section:has(h2), in in section + section)
+    px, cm, in
 3 Relative:
-    em, rem, vw Check
+    em, rem, vw
 
 
 Box Model:
 
 Margin
-    Need to use longmargin(margin-top, margin-right, margin-bottom, margin-left) Check
-    Short margin(margin: 10px 20px 30px 40px) Check
-    Auto margins(margin: auto)Check 
+    Need to use longmargin(margin-top, margin-right, margin-bottom, margin-left)
+    Short margin(margin: 10px 20px 30px 40px)
+    Auto margins(margin: auto)
 
 Padding
-    Long padding(padding-top, padding-right, padding-bottom, padding-left)Check 
-    Short padding(padding: 10px 20px 30px 40px)Check 
+    Long padding(padding-top, padding-right, padding-bottom, padding-left)
+    Short padding(padding: 10px 20px 30px 40px)
 
 Borders
-    border-style Check
-    border-width Check
-    border-color Check
-    border-radius Check
+    border-style
+    border-width
+    border-color
+    border-radius
 
 Text
-    color Check(see section, p to change color)
-    text-align Check
-    text-decoration Check
+    color
+    text-align
+    text-decoration
 
 Display
     Must use at least 2: none, block, inline, inline-block
@@ -92,42 +92,11 @@ Combining Two Selectors(element.class)
 Nested Selectors
 */
 
+
 /* ID Selector (#id) ID = Date */
 #date {
 	background-color: rgb(0, 128, 0); /* green */
 	color: #fff; /* white */
-	margin-top: 10px; /* Absolute unit: pixel */
-	margin-right: 20px; /* Absolute unit: pixel */
-	margin-bottom: 30px; /* Absolute unit: pixel */
-	margin-left: 40px; /* Absolute unit: pixel */
-	padding-top: 10px; /* Absolute unit: pixel */
-	padding-right: 20px; /* Absolute unit: pixel */
-	padding-bottom: 30px; /* Absolute unit: pixel */
-	padding-left: 40px; /* Absolute unit: pixel */
-	border-style: solid; /* Border style */
-	border-width: 2px; /* Border width */
-	border-color: #000; /* Border color: black */
-	border-radius: 5px; /* Border radius */
-	text-align: center; /* Text alignment */
-}
-
-/* ID Selector (#id) ID = Date */
-#agenda {
-	background-color: rgb(158, 227, 98); /* green */
-	color: #fff; /* white */
-	margin-top: 2rem; /* Relative unit: rem */
-	margin-right: 20px; /* Absolute unit: pixel */
-	margin-bottom: 1.5cm; /* Absolute unit: centimeter */
-	margin-left: 20px; /* Absolute unit: pixel */
-	padding-top: 10px; /* Absolute unit: pixel */
-	padding-right: 2em; /* Relative unit: em */
-	padding-bottom: 15px; /* Absolute unit: pixel */
-	padding-left: 2em; /* Relative unit: em */
-	border-style: solid; /* Border style */
-	border-width: 2px; /* Border width */
-	border-color: #000; /* Border color: black */
-	border-radius: 5px; /* Border radius */
-	text-align: center; /* Text alignment */
 }
 
 /* Element Selector (element) and uses background-color, hsla, and colorspace */
@@ -138,15 +107,12 @@ header {
 		50%,
 		0.8
 	); /* blue with 80% transparency */
-	color: color(colorspace srgb 0 0 0 / 1); /* black */
-	margin: auto;
+	color: (colorspace srgb 0 0 0 / 1) Black;
 }
 
 /* Class Selector (.class) and uses rgba */
 .content {
 	background-color: rgba(255, 165, 0, 0.5); /* orange with 50% transparency */
-	margin: 10px 5px, 0px, 5px; /* Short margin */
-	padding: 1rem, 0rem, 0rem, 1rem; /* Relative unit: rem */
 }
 
 /* Universal Selector (*) * selects all the elements*/
@@ -165,20 +131,10 @@ a[href="https://www.drumondpark.co.uk/articulate_cards"]
 }
 
 footer {
-	background-color: var(--main-bg-color, #ccc);
-	margin-top: 1in;
-	margin-right: 2rem;
-	margin-bottom: 30px;
-	margin-left: 1in;
-	padding-top: 15px;
-	padding-right: 20px;
-	padding-bottom: 15px;
-	padding-left: 20px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #000;
-	border-radius: 5px;
-	text-align: center;
+	background-color: var(
+		--main-bg-color,
+		#ccc
+	); /* fallback to light gray, variable reused from root */
 }
 
 /* Pseudo-class Selector, i.e. on an action for a selector in CSS */
@@ -196,12 +152,12 @@ nav ul li {
 
 /* Descendant Combinator (element element) the nav links are ordered lists so we can treat them as decsendents */
 nav ul li a {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* Child Combinator (element > element). There exists only one nav in main so it is treated as a child */
 main > nav {
-	padding: 1rem; /* Relative unit: rem */
+	padding: 10px;
 }
 
 /* General sibling combinator (element ~ element): this was the only sibling I found*/
@@ -211,18 +167,16 @@ section ~ hr {
 
 /* Adjacent sibling combinator (element + element) */
 section + section {
-	margin-top: 2rem; /* Relative unit: rem */
+	margin-top: 20px;
 }
 
-section > p {
-	/* Selects all p elements within a section, makes the margin auto and changes the text color to black */
-	margin: auto;
-	color: black;
-}
 /* Combining Two Selectors (element.class) */
 section#agenda {
 	background-color: #87ceeb; /* sky blue */
 }
+
+
+
 
 /* :has() Selector */
 section:has(h2) {
