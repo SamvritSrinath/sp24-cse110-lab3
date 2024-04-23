@@ -100,19 +100,19 @@ Nested Selectors
 #date {
 	background-color: rgb(0, 128, 0); /* green */
 	color: #fff; /* white */
-	margin-top: 10px; /* Absolute unit: pixel */
-	margin-right: 20px; /* Absolute unit: pixel */
-	margin-bottom: 30px; /* Absolute unit: pixel */
-	margin-left: 40px; /* Absolute unit: pixel */
-	padding-top: 10px; /* Absolute unit: pixel */
-	padding-right: 20px; /* Absolute unit: pixel */
-	padding-bottom: 30px; /* Absolute unit: pixel */
-	padding-left: 40px; /* Absolute unit: pixel */
-	border-style: solid; /* Border style */
-	border-width: 2px; /* Border width */
-	border-color: #0000ff; /* Border color: black */
-	border-radius: 5px; /* Border radius */
-	text-align: center; /* Text alignment */
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 40px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0000ff;
+	border-radius: 5px;
+	text-align: center;
 }
 
 /* ID Selector (#id) ID = Date */
@@ -124,9 +124,9 @@ Nested Selectors
 	margin-right: 20px;
 	margin-bottom: 1.5cm;
 	margin-left: 20px;
-	padding-top: 10px;
+	padding-top: 10vw;
 	padding-right: 2em;
-	padding-bottom: 15px;
+	padding-bottom: 15vw;
 	padding-left: 2em;
 	border-style: solid;
 	border-width: 2px;
@@ -265,7 +265,8 @@ section#agenda details summary {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: center;
 }
 
@@ -275,7 +276,9 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	gap: 1px;
+	row-gap: 1px;
+	column-gap: 5vw;
+	place-content: center;
 	grid-auto-flow: row;
 	justify-content: center;
 }
@@ -299,6 +302,8 @@ form textarea {
 form button {
 	width: 30%;
 	height: 50px;
+	min-width: 20px;
+	max-width: 100%;
 	grid-column: span 2;
 }
 
