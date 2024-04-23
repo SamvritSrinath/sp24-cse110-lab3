@@ -120,19 +120,19 @@ Nested Selectors
 	font-family: "Jacquard 12 Charted", system-ui; /* Using custom font */
 	background-color: rgb(158, 227, 98); /* green */
 	color: #fff; /* white */
-	margin-top: 2rem; /* Relative unit: rem */
-	margin-right: 20px; /* Absolute unit: pixel */
-	margin-bottom: 1.5cm; /* Absolute unit: centimeter */
-	margin-left: 20px; /* Absolute unit: pixel */
-	padding-top: 10px; /* Absolute unit: pixel */
-	padding-right: 2em; /* Relative unit: em */
-	padding-bottom: 15px; /* Absolute unit: pixel */
-	padding-left: 2em; /* Relative unit: em */
-	border-style: solid; /* Border style */
-	border-width: 2px; /* Border width */
-	border-color: #000; /* Border color: black */
-	border-radius: 5px; /* Border radius */
-	text-align: center; /* Text alignment */
+	margin-top: 2rem;
+	margin-right: 20px;
+	margin-bottom: 1.5cm;
+	margin-left: 20px;
+	padding-top: 10px;
+	padding-right: 2em;
+	padding-bottom: 15px;
+	padding-left: 2em;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000;
+	border-radius: 5px;
+	text-align: center;
 }
 
 /* Element Selector (element) and uses background-color, hsla, and colorspace */
@@ -150,12 +150,12 @@ header {
 /* Class Selector (.class) and uses rgba */
 .content {
 	background-color: rgba(255, 165, 0, 0.5); /* orange with 50% transparency */
-	margin: 10px 5px, 0px, 5px; /* Short margin */
-	padding: 1rem, 0rem, 0rem, 1rem; /* Relative unit: rem */
-	display: inline-block; /* Display property */
-	height: 200px; /* Height property */
-	min-width: 300px; /* Min-width property */
-	position: relative; /* Position property */
+	margin: 10px 5px, 0px, 5px;
+	padding: 1rem, 0rem, 0rem, 1rem;
+	display: inline-block;
+	height: 200px;
+	min-width: 300px;
+	position: relative;
 }
 
 .Roles {
@@ -322,7 +322,6 @@ form button {
 	align-items: center;
 }
 
-
 /* Media Query for screen-width on smaller screens like phones, the initial title turns to a less aggressive color */
 @media screen and (max-width: 600px) {
 	/* Changes the background color of the header to a light blue */
@@ -337,4 +336,3 @@ footer {
 		font-size: 1.5em;
 	}
 }
-
