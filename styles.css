@@ -90,8 +90,12 @@ Adjacent sibling combinator(element + element)
 Combining Two Selectors(element.class)
 :has() Selector
 Nested Selectors
-*/
+**/
 
+/* Import Custom font */
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap");
+/* Import Open Sans font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 /* ID Selector (#id) ID = Date */
 #date {
 	background-color: rgb(0, 128, 0); /* green */
@@ -113,6 +117,7 @@ Nested Selectors
 
 /* ID Selector (#id) ID = Date */
 #agenda {
+	font-family: "Jacquard 12 Charted", system-ui; /* Using custom font */
 	background-color: rgb(158, 227, 98); /* green */
 	color: #fff; /* white */
 	margin-top: 2rem; /* Relative unit: rem */
@@ -165,7 +170,7 @@ header {
 
 /* Universal Selector (*) * selects all the elements*/
 * {
-	font-family: Arial, sans-serif; /* fallback font in case browser doesn't recognize the font */
+	font-family: "Open Sans", system-ui; /* fallback font in case browser doesn't recognize the font */
 }
 
 a[href="https://www.drumondpark.co.uk/articulate_cards"]
@@ -197,6 +202,12 @@ footer {
 
 /* Pseudo-class Selector, i.e. on an action for a selector in CSS */
 a:hover {
+	color: color-mix(
+		colorspace srgb #ff0000 50% #0000ff 50%
+	); /* red and blue mix */
+}
+/* if the link is active, make the color a red and blue mix */
+a:active {
 	color: color-mix(
 		colorspace srgb #ff0000 50% #0000ff 50%
 	); /* red and blue mix */
@@ -310,3 +321,20 @@ form button {
 	justify-content: center;
 	align-items: center;
 }
+
+
+/* Media Query for screen-width on smaller screens like phones, the initial title turns to a less aggressive color */
+@media screen and (max-width: 600px) {
+	/* Changes the background color of the header to a light blue */
+	header {
+		background-color: #add8e6; /* light blue */
+	}
+}
+
+/* nested selector to make the font larger for the bottom paragraph */
+footer {
+	& p {
+		font-size: 1.5em;
+	}
+}
+
