@@ -1,0 +1,182 @@
+/**
+Checklist:
+Comments for each selector
+rgb(r,g,b) Check  rgba(r,g,b,a) Check
+hex #FFF Check ### FFFFFF Check
+hsl hsla Check
+color(colorspace c1 c2 c3 [\A]) Check
+color-mix(colorspace c1[p1] c2[p2] [\A]) Check
+CSS Variables + Fallbacks Check
+Used --main-bg-color as HTML Variable for solution, then referenced in root and footer with fallback
+
+
+
+Background color Check
+
+
+Units
+3 Absolute: 
+    px, cm, in
+3 Relative:
+    em, rem, vw
+
+Box Model:
+
+Margin
+    Need to use longmargin(margin-top, margin-right, margin-bottom, margin-left)
+    Short margin(margin: 10px 20px 30px 40px)
+    Auto margins(margin: auto)
+
+Padding
+    Long padding(padding-top, padding-right, padding-bottom, padding-left)
+    Short padding(padding: 10px 20px 30px 40px)
+
+Borders
+    border-style
+    border-width
+    border-color
+    border-radius
+
+Text
+    color
+    text-align
+    text-decoration
+
+Display
+    Must use at least 2: none, block, inline, inline-block
+Sizing:
+    height,
+    width,
+    max-width,
+    min-width
+Position: 
+Use two of the values on position
+    absolute,relative,fixed,static,sticky
+
+Pseudoclass:
+:hover
+:active 
+
+Layouts
+    Flex
+        3 Flexbox attributes
+        At least 5 children within the flex
+    Grid
+        Apply Grid to display
+        two children in the grid, use at least 5 grid attributes
+
+Media Query
+    Use 1 Media Query for screen-width(for responsive design)
+
+External Fonts: 
+    Use at least 1 external font
+
+
+Selectors
+.class
+#id
+* (universal)
+element
+attribute=foo
+element, element
+p:hover
+Descendent Combinator(element element)
+Child Combinator(element > element)
+General sibling combinator(element ~ element)
+Adjacent sibling combinator(element + element)
+Combining Two Selectors(element.class)
+:has() Selector
+Nested Selectors
+*/
+
+/* ID Selector (#id) ID = Date */
+#date {
+	background-color: rgb(0, 128, 0); /* green */
+	color: #fff; /* white */
+}
+
+/* Element Selector (element) and uses background-color, hsla, and colorspace */
+header {
+	background-color: hsla(
+		240,
+		100%,
+		50%,
+		0.8
+	); /* blue with 80% transparency */
+	color: (colorspace srgb 0 0 0 / 1) Black;
+}
+
+/* Class Selector (.class) and uses rgba */
+.content {
+	background-color: rgba(255, 165, 0, 0.5); /* orange with 50% transparency */
+}
+
+/* Universal Selector (*) * selects all the elements*/
+* {
+	font-family: Arial, sans-serif; /* fallback font in case browser doesn't recognize the font */
+}
+
+a[href="https://www.drumondpark.co.uk/articulate_cards"]
+{
+	color: yellow;
+}
+
+/* CSS Variables & Fallbacks */
+:root {
+	--main-bg-color: #f0f0f0; /* light gray */
+}
+
+footer {
+	background-color: var(
+		--main-bg-color,
+		#ccc
+	); /* fallback to light gray, variable reused from root */
+}
+
+/* Pseudo-class Selector, i.e. on an action for a selector in CSS */
+a:hover {
+	color: color-mix(
+		colorspace srgb #ff0000 50% #0000ff 50%
+	); /* red and blue mix */
+}
+
+/* Selector List (element, element); we choose multiple elements and apply a margin*/
+header h1,
+nav ul li {
+	margin: 10px;
+}
+
+/* Descendant Combinator (element element) the nav links are ordered lists so we can treat them as decsendents */
+nav ul li a {
+	text-decoration: none;
+}
+
+/* Child Combinator (element > element). There exists only one nav in main so it is treated as a child */
+main > nav {
+	padding: 10px;
+}
+
+/* General sibling combinator (element ~ element): this was the only sibling I found*/
+section ~ hr {
+	border-color: #000; /* black */
+}
+
+/* Adjacent sibling combinator (element + element) */
+section + section {
+	margin-top: 20px;
+}
+
+/* Combining Two Selectors (element.class) */
+section#agenda {
+	background-color: #87ceeb; /* sky blue */
+}
+
+/* :has() Selector */
+section:has(h2) {
+	margin-bottom: 20px;
+}
+
+/* Nested Selectors */
+section#agenda details summary {
+	font-style: italic;
+}
