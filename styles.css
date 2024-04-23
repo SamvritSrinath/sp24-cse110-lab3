@@ -1,0 +1,110 @@
+/**
+Checklist:
+Comments for each selector
+rgb(r,g,b) Check  rgba(r,g,b,a) Check
+hex #FFF Check ### FFFFFF Check
+hsl hsla Check
+color(colorspace c1 c2 c3 [\A]) Check
+color-mix(colorspace c1[p1] c2[p2] [\A])
+CSS Variables + Fallbacks
+
+Background color
+
+Units
+3 Absolute: 
+    px, cm, in
+3 Relative:
+    em, rem, vw
+
+/* ID Selector (#id) ID = Date */
+#date {
+	background-color: rgb(0, 128, 0); /* green */
+	color: #fff; /* white */
+}
+
+/* Element Selector (element) and uses background-color, hsla, and colorspace */
+header {
+	background-color: hsla(
+		240,
+		100%,
+		50%,
+		0.8
+	); /* blue with 80% transparency */
+	color: (colorspace srgb 0 0 0 / 1) Black;
+}
+
+/* Class Selector (.class) and uses rgba */
+.content {
+	background-color: rgba(255, 165, 0, 0.5); /* orange with 50% transparency */
+}
+
+/* Universal Selector (*) * selects all the elements*/
+* {
+	font-family: Arial, sans-serif; /* fallback font in case browser doesn't recognize the font */
+}
+
+a[href="https://www.drumondpark.co.uk/articulate_cards"]
+{
+	color: yellow;
+}
+
+/* CSS Variables & Fallbacks */
+:root {
+	--main-bg-color: #f0f0f0; /* light gray */
+}
+
+footer {
+	background-color: var(
+		--main-bg-color,
+		#ccc
+	); /* fallback to light gray, variable reused from root */
+}
+
+/* Pseudo-class Selector, i.e. on an action for a selector in CSS */
+a:hover {
+	color: color-mix(
+		colorspace srgb #ff0000 50% #0000ff 50%
+	); /* red and blue mix */
+}
+
+/* Selector List (element, element); we choose multiple elements and apply a margin*/
+header h1,
+nav ul li {
+	margin: 10px;
+}
+
+/* Descendant Combinator (element element) the nav links are ordered lists so we can treat them as decsendents */
+nav ul li a {
+	text-decoration: none;
+}
+
+/* Child Combinator (element > element). There exists only one nav in main so it is treated as a child */
+main > nav {
+	padding: 10px;
+}
+
+/* General sibling combinator (element ~ element): this was the only sibling I found*/
+section ~ hr {
+	border-color: #000; /* black */
+}
+
+/* Adjacent sibling combinator (element + element) */
+section + section {
+	margin-top: 20px;
+}
+
+/* Combining Two Selectors (element.class) */
+section#agenda {
+	background-color: #87ceeb; /* sky blue */
+}
+
+
+/* :has() Selector */
+section:has(h2) {
+	margin-bottom: 20px;
+}
+
+/* Nested Selectors */
+section#agenda details summary {
+	font-style: italic;
+}
