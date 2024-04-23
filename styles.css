@@ -106,7 +106,7 @@ Nested Selectors
 	padding-left: 40px; /* Absolute unit: pixel */
 	border-style: solid; /* Border style */
 	border-width: 2px; /* Border width */
-	border-color: #000; /* Border color: black */
+	border-color: #0000ff; /* Border color: black */
 	border-radius: 5px; /* Border radius */
 	text-align: center; /* Text alignment */
 }
@@ -176,7 +176,7 @@ footer {
 	padding-left: 20px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #000;
+	border-color: /*red*/ #ff0000;
 	border-radius: 5px;
 	text-align: center;
 }
