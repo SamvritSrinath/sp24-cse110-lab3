@@ -322,6 +322,7 @@ form button {
 	align-items: center;
 }
 
+
 /* Media Query for screen-width on smaller screens like phones, the initial title turns to a less aggressive color */
 @media screen and (max-width: 600px) {
 	/* Changes the background color of the header to a light blue */
@@ -336,3 +337,4 @@ footer {
 		font-size: 1.5em;
 	}
 }
+
