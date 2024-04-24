@@ -341,3 +341,8 @@ footer {
 		font-size: 1.5em;
 	}
 }
+
+/*Selector for element.class */
+p.Thanks {
+	color: blue;
+}
